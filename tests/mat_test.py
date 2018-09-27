@@ -83,7 +83,7 @@ class MutSqMatTest(unittest.TestCase):
 
         mat_copy = mat.copy()
 
-        self.assertEquals(mat, mat_copy)
+        self.assertEqual(mat, mat_copy)
         self.assertFalse(mat_copy is mat)
 
     def test_contains(self):
@@ -104,7 +104,7 @@ class MutSqMatTest(unittest.TestCase):
         mat_ref[Vec2(3, 3)] = 4
         mat_ref[Vec2(1, 1)] = 2
 
-        self.assertEquals(mat_ref, mat)
+        self.assertEqual(mat_ref, mat)
 
     def test_eq_not(self):
         mat = MutSqMat(4)
@@ -130,5 +130,5 @@ class MutSqMatTest(unittest.TestCase):
         hash_mat_ref = hash(mat_ref)
         hash_mat_other = hash(mat_other)
 
-        self.assertEquals(hash_mat_ref, hash_mat)
+        self.assertEqual(hash_mat_ref, hash_mat)
         self.assertNotEqual(hash_mat_other, hash_mat)

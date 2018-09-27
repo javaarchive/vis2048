@@ -6,9 +6,17 @@ An implementation of [2048](http://2048game.com) with visualization support and 
 
 ![Screenshot of a demo with 4 simultaneous games](screenshot.png)
 
+## Installation
+
+```
+./setup.py install
+```
+
 ## Testing
 
-Execute `./tests/test.py` to run the tests that are based on the built-in `unittest` module.
+```
+python -m unittest tests/test.py
+```
 
 ## License
 MIT.
