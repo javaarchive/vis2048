@@ -4,7 +4,7 @@
 
 An implementation of [2048](http://2048game.com) with visualization support and extensive tests.
 
-![Screenshot of a demo with 4 simultaneous games](screenshot.png)
+![Screenshot of a demo with 4 simultaneous games](https://github.com/Fylipp/vis2048/blob/master/screenshot.png?raw=true)
 
 ## Installation
 
