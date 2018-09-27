@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='vis2048',
-    version='1.0.0',
+    version='1.0.2',
 
     description='Implementation of 2048 with visualization support',
     long_description=long_description,

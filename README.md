@@ -8,7 +8,17 @@ An implementation of [2048](http://2048game.com) with visualization support and 
 
 ## Installation
 
+Via `pip`:
+
 ```
+pip install vis2048
+```
+
+Or `git clone`:
+
+```
+git clone https://github.com/Fylipp/vis2048
+cd vis2048
 ./setup.py install
 ```
 
