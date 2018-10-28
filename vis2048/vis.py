@@ -95,6 +95,7 @@ class GameVis(tkinter.Frame):
             self._show_msg('You Lose!')
 
         self.update_idletasks()
+        self.update()
 
     def _show_msg(self, msg):
         msg_lbl = tkinter.Label(master=self, fg=FG_COLOR_MSG, bg=BG_COLOR_MSG, text=msg, font=self.font)
