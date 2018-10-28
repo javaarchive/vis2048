@@ -27,7 +27,7 @@ class Game:
 
         for y in range(self.width):
             row = self.mat.get_row(y)
-            old = row
+            old = row.copy()
             self._move_left(row)
             self.mat.set_row(y, row)
 
