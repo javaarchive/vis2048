@@ -9,13 +9,13 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='vis2048',
-    version='1.0.3',
+    version='1.1.2',
 
     description='Implementation of 2048 with visualization support',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='Philipp Ploder',
-    url='https://github.com/Fylipp/vis2048',
+    author='Philipp Ploder and javaarchive',
+    url='https://github.com/javaarchive/vis2048',
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
