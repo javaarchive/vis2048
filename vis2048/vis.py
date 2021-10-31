@@ -76,6 +76,8 @@ class GameVis(tkinter.Frame):
         self._init_vis()
         self.update_vis()
 
+        self.msg_lbl = None
+
     def update_vis(self):
         """
         Update the visualization. Should be called whenever the game itself is mutated.
@@ -93,13 +95,16 @@ class GameVis(tkinter.Frame):
             self._show_msg('You Win!')
         elif self.game.stuck():
             self._show_msg('You Lose!')
-
+        else:
+            if self.msg_lbl:
+                self.msg_lbl.destroy()
         self.update_idletasks()
         self.update()
 
     def _show_msg(self, msg):
         msg_lbl = tkinter.Label(master=self, fg=FG_COLOR_MSG, bg=BG_COLOR_MSG, text=msg, font=self.font)
         msg_lbl.place(relx=.5, rely=.5, anchor=tkinter.CENTER)
+        self.msg_lbl = msg_lbl
 
     def _init_vis(self):
         width = self.game.width
@@ -131,7 +136,7 @@ class GameVisDemo(tkinter.Frame):
         self.all_games: Game = []
 
         self.grid()
-        self.master.title('vis2048 - Demo with 4 simultaneous games')
+        self.master.title('vis2048 - Demo with multiple simultaneous games')
         self.master.bind("<Up>", self._key_down(self._up))
         self.master.bind("<Down>", self._key_down(self._down))
         self.master.bind("<Left>", self._key_down(self._left))
