@@ -18,6 +18,11 @@ class Game:
 
         self.mat = MutSqMat(width)
 
+        self.width = width
+
+    def reset(self):
+        self.mat = MutSqMat(self.width)
+
     @property
     def width(self) -> int:
         return self.mat.width
