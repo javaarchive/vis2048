@@ -142,7 +142,7 @@ class GameVisDemo(tkinter.Frame):
 
         for i in range(games):
             gamevis = GameVis(master=background, font_size=20)
-            gamevis.grid(row=i // rows, column=i % columns, padx=5, pady=5)
+            gamevis.grid(row=i // columns, column=i % columns, padx=5, pady=5)
             self.all_gamevis.append(gamevis)
             self.all_games.append(gamevis.game)
 

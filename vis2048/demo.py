@@ -1,6 +1,6 @@
 import tkinter
 
-from vis import GameVisDemo
+from .vis import GameVisDemo
 
 
 def main():
