@@ -13,6 +13,9 @@ class MutSqMat:
         self.width = width
         self._items = _items or [None for _ in range(width * width)]
 
+    def copy(self):
+        return MutSqMat(self.width, self._items.copy())
+
     def rotate(self, right_angles: int):
         """
         Rotates the matrix by the given amount of right angles counter-clockwise.

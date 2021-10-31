@@ -124,11 +124,11 @@ class GameVisDemo(tkinter.Frame):
     A visualization demonstration packaged as a Tkinter frame.
     """
 
-    def __init__(self,games=9,rows=3,columns=3):
+    def __init__(self,games: int = 9,rows: int = 3,columns: int = 3,gameargs = None):
         tkinter.Frame.__init__(self)
 
-        self.all_gamevis = []
-        self.all_games = []
+        self.all_gamevis: GameVis = []
+        self.all_games: Game = []
 
         self.grid()
         self.master.title('vis2048 - Demo with 4 simultaneous games')
@@ -141,7 +141,10 @@ class GameVisDemo(tkinter.Frame):
         background.grid()
 
         for i in range(games):
-            gamevis = GameVis(master=background, font_size=20)
+            game = None
+            if gameargs:
+                game = Game(**gameargs)
+            gamevis = GameVis(master=background, font_size=20, game = game)
             gamevis.grid(row=i // columns, column=i % columns, padx=5, pady=5)
             self.all_gamevis.append(gamevis)
             self.all_games.append(gamevis.game)
