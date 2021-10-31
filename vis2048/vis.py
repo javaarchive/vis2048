@@ -151,8 +151,8 @@ class GameVisDemo(tkinter.Frame):
             game = None
             if gameargs:
                 game = Game(**gameargs)
-            gamevis = GameVis(master=background, font_size=14, game = game)
-            gamevis.grid(row=i // columns, column=i % columns, padx=5, pady=5)
+            gamevis = GameVis(master=background, font_size=12, game = game)
+            gamevis.grid(row=i // columns, column=i % columns, padx=3, pady=3)
             self.all_gamevis.append(gamevis)
             self.all_games.append(gamevis.game)
 
