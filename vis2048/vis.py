@@ -63,7 +63,9 @@ class GameVis(tkinter.Frame):
         :param kwargs: Arguments passed on the the  tkinter.Frame constructor.
         """
         tkinter.Frame.__init__(self, **kwargs)
-
+        
+        self.msg_lbl = None
+        
         self.grid_padding = grid_padding
         self.font = (font_name, font_size, font_style)
         self.game = game or Game(4, 2, 2048)
@@ -76,7 +78,7 @@ class GameVis(tkinter.Frame):
         self._init_vis()
         self.update_vis()
 
-        self.msg_lbl = None
+        
 
     def update_vis(self):
         """
